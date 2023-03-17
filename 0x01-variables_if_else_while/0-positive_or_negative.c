@@ -2,7 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-/* Tells if a random is negative, positive or zero */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int n;
