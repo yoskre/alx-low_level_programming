@@ -15,9 +15,9 @@ int main(void)
 	{
 
 		c2 = c1 + 1;
-		c3 = c2 + 1;
 		while (c2 <= '9')
 		{
+			c3 = c2 + 1;
 			while (c3 <= '9')
 			{
 				putchar(c1);
