@@ -10,21 +10,23 @@ int main(void)
 	int c1 = '0';
 	int c2;
 
-	while (c1 < '8')
+	while (c1 <= '9')
 	{
+
 		c2 = c1 + 1;
 		while (c2 <= '9')
 		{
 			putchar(c1);
 			putchar(c2);
-			putchar(',');
-			putchar(' ');
+			if (c1 != '8' || c2 != '9')
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			c2++;
 		}
 		c1++;
 	}
-	putchar(c1);
-	putchar(c1 + 1);
 	putchar('\n');
 	return (0);
 }
