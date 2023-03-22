@@ -8,6 +8,7 @@
 void jack_bauer(void)
 {
 	int n = 0;
+
 	while (n < 2359)
 	{
 		while ((n % 100) <= 59)
