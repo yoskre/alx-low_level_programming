@@ -15,7 +15,8 @@ void times_table(void)
 		{
 			int ij = i * j;
 
-			if (j == 0);
+			if (j == 0)
+				;
 			else
 			{
 				if (((ij / 10) == 0))
