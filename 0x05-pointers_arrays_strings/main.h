@@ -4,4 +4,4 @@
 int _putchar(char c);
 void reset_to_98(int *n);
 
-eendif /* MAIN_H */
+#endif /* MAIN_H */
