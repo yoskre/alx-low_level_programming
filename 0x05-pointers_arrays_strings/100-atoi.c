@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
  * _atoi - convert string @s to integer
  * @s: string to be converted
@@ -25,7 +26,17 @@ int _atoi(char *s)
 		if ((*s >= '0') && (*s <= '9'))
 		{
 			if (found == 1)
-				n *= coef;
+			{
+				if ((n > INT_MAX / coef)
+						|| (n == INT_MAX / coef && (*s - '0') > INT_MAX % coef))
+				{
+					if (sign > 0)
+						return (INT_MAX);
+					else
+						return (INT_MIN);
+				}
+			}
+			n *= coef;
 			n += *s - '0';
 			found = 1;
 		}
