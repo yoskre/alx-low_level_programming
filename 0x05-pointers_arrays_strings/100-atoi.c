@@ -18,10 +18,9 @@ int _atoi(char *s)
 		{
 			break;
 		}
-		/* add a sign if it exists */
 		if (*s == '-')
 		{
-			sign = -1;
+			sign *= -1;
 		}
 		if ((*s >= '0') && (*s <= '9'))
 		{
@@ -29,10 +28,6 @@ int _atoi(char *s)
 				n *= coef;
 			n += *s - '0';
 			found = 1;
-		}
-		if (!((*s >= '0') && (*s <= '9')) && (*s != '-'))
-		{
-			sign = 1;
 		}
 		s++;
 	}
