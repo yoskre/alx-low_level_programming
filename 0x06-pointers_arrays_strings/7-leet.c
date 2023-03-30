@@ -17,7 +17,10 @@ char *leet(char *str)
 	{
 		for (i = 0; i < 10; i++)
 			if (*str == leet[0][i])
+			{
 				*str = leet[1][i];
+				break;
+			}
 		str++;
 	}
 	return (p);
