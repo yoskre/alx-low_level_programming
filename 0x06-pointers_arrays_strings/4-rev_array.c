@@ -13,7 +13,7 @@ void reverse_array(int *a, int n)
 	int p2 = n - 1;
 	int tmp;
 
-	while (p1 != p2)
+	while (p1 < p2)
 	{
 		tmp = a[p1];
 		a[p1] = a[p2];
