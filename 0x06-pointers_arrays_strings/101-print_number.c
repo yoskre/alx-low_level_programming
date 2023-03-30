@@ -9,7 +9,7 @@
 void print_number(int n)
 {
 	int coef = 10;
-	
+
 	while (n / coef)
 		coef *= 10;
 	if (n < 0)
