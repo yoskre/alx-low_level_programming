@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strchr - find first occurence of @c in @s
  * @s: string
@@ -11,8 +12,10 @@ char *_strchr(char *s, char c)
 	while (s)
 	{
 		if (*s == c)
-			break;
+			return (s);
 		s++;
 	}
-	return (s);
+	if (!*s)
+		return (s);
+	return (NULL);
 }
