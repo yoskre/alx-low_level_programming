@@ -14,23 +14,18 @@ char *_strstr(char *haystack, char *needle)
 
 	while (*needle)
 	{
-		while (*haystack)
+		if (*haystack == *needle)
 		{
-			if (*haystack == *needle)
-			{
-				if (ph == NULL)
-					ph = haystack;
-				needle++;
-			}
-			else
-			{
-				ph = NULL;
-				needle = pn;
-			}
-			if (*needle == '\0')
-				return (ph);
-			haystack++;
+			if (ph == NULL)
+				ph = haystack;
+			needle++;
 		}
+		else
+		{
+			ph = NULL;
+			needle = pn;
+		}
+		haystack++;
 		if (*needle != '\0' && *haystack == '\0')
 			return (NULL);
 	}
