@@ -14,8 +14,10 @@ char *_strstr(char *haystack, char *needle)
 
 	while (*needle)
 	{
+		printf("inside while(*needle) : needle = %c)\n", *needle);
 		while (*haystack)
 		{
+			printf("if haystack = %c == needle = %c\n", *haystack, *needle);
 			if (*haystack == *needle)
 			{
 				if (ph == NULL)
@@ -30,9 +32,12 @@ char *_strstr(char *haystack, char *needle)
 			if (*needle == '\0')
 				return (ph);
 			haystack++;
+			printf("inside while (*haystack) : needle = %c ; haystack = %c\n", *needle, *haystack);
 		}
+		printf("at end of while (*needle) : needle = %c ; haystack = %c ; ph = %c ; pn = %c\n", *needle, *haystack, *ph, *pn);
 		if (*needle != '\0' && *haystack == '\0')
 			return (NULL);
 	}
+	printf("at end of main : needle = %c ; haystack = %c ; ph = %c ; pn = %c\n", *needle, *haystack, *ph, *pn);
 	return (ph);
 }
