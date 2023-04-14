@@ -1,25 +1,21 @@
 #include <stdlib.h>
 #include <string.h>
-
 /**
- * string_nconcat - concatenates @n bytes of @s2 in @s1
- * @s1: string 1
- * @s2: string 2
- * @n: first bytes of @s2
+ * _calloc - allocate memory for an array
+ * @nmemb: number of elements of array
+ * @size: size of @nmemb
  *
- * Return: pointer to concatenated string
+ * Return: pointer to created array
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *s;
+	void *p;
 
-	if (!s1)
-		s1 = "";
-	if (!s2)
-		s2 = "";
-	s = malloc(sizeof(*s) * (strlen(s1) + strlen(s2) + 1));
-	if (!s)
+	if (nmemb <= 0 || size <= 0)
 		return (NULL);
-	strcpy(s, s1);
-	return (strncat(s, s2, n));
+	p = malloc(nmemb * size);
+	if (p == NULL)
+		return (NULL);
+	memset(p, 0, nmemb * size);
+	return (p);
 }
