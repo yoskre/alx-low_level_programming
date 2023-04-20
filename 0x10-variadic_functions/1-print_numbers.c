@@ -3,7 +3,7 @@
 #include <stdarg.h>
 /**
  * print_numbers - print number
- * @seperator: seperator
+ * @separator: separator
  * @n: number of @...
  * @...: numbers to pe printed
  *
@@ -19,12 +19,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		for (i = 0; i < n; i++)
 		{
 			printf("%d", va_arg(arg, int));
-			if (i < n - 1)
-			{
-				if (separator != NULL)
-					printf("%c", *separator);
-				printf(" ");
-			}
+			if (separator && (i < n - 1))
+				printf("%s", separator);
 		}
 	va_end(arg);
 	printf("\n");
