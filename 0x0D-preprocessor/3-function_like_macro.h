@@ -1,6 +1,6 @@
 #ifndef FUNCTIONS_LIKE_MACROS
 #define FUNCTIONS_LIKE_MACROS
-#include <stdlib.h>
-#define ABS(X) abs(X)
+
+#define ABS(X) ((X) < 0 ? -(X) : (X))
 
 #endif /* MAIN_H */
