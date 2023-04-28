@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include "lists.h"
@@ -6,7 +5,7 @@
  * create_node - create list_t node
  * @str: string
  *
- * Return: number of nodes
+ * Return: list_t
  */
 list_t *create_node(const char *str)
 {
@@ -32,7 +31,7 @@ list_t *create_node(const char *str)
  * @head: list_t type list
  * @str: string
  *
- * Return: number of nodes
+ * Return: list_t
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -51,6 +50,5 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 		*head = node;
-
 	return (*head);
 }
