@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <stdlib.h>
-#include <sys/types.h>
 /**
  * free_listint - free a listint_t
  * @head: head of listint_t
