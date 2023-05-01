@@ -11,9 +11,8 @@ void free_listint2(listint_t **head)
 	if (*head)
 		while (*head)
 		{
-			listint_t *pointer = *head;
+			listint_t *pointer = (*head)->next;
 
-			pointer = (*head)->next;
 			free(*head);
 			*head = pointer;
 		}
