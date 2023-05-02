@@ -12,7 +12,7 @@ void delete_nodeint(listint_t *pa, listint_t *pb)
 {
 	if (pa != NULL)
 	{
-		if (pb != NULL)
+		if (pb->next != NULL)
 			pa->next = pb->next;
 		else
 			pa->next = NULL;
@@ -41,7 +41,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		}
 		for (i = 0; i < index && pointer != NULL; i++)
 		{
-			if (i + 1 == index)
+			if (i + 1 == index && pointer->next != NULL)
 			{
 				delete_nodeint(pointer, pointer->next);
 				return (1);
