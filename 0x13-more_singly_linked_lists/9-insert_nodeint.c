@@ -7,7 +7,7 @@
  * @pb: listint_t node
  * @n: integer
  *
- * Return: void, or NULL at fail
+ * Return: new node, or NULL at fail
  */
 listint_t *insert_nodeint(listint_t *pa, listint_t *pb, int n)
 {
