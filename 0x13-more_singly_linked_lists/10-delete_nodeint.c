@@ -11,7 +11,12 @@
 void delete_nodeint(listint_t *pa, listint_t *pb)
 {
 	if (pa != NULL)
-		pa->next = pb->next;
+	{
+		if (pb->next != NULL)
+			pa->next = pb->next;
+		else
+			pa->next = NULL;
+	}
 	free(pb);
 }
 /**
