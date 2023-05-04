@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-#include <ctype.h>
 /**
  * print_binary - print binary representation of @n
  * @n: integer
