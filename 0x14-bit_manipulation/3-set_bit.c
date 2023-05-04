@@ -18,5 +18,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 	if ((index + 1) / 8 > l)
 		return (-1);
 	shift = shift << index;
-	return (*n = (*n | shift));
+	*n |= shift;
+	return (1);
 }
