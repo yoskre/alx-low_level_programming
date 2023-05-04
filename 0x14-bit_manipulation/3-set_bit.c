@@ -11,7 +11,6 @@
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	size_t l = sizeof(*n);
-	size_t i;
 	unsigned long int shift = 0x1;
 
 	if (n == NULL)
