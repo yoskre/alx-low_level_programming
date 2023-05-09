@@ -16,12 +16,17 @@ int create_file(const char *filename, char *text_content)
 	int f, bw;
 	mode_t p;
 
-	if (!filename || !text_content)
+	if (!filename)
 		return (-1);
 	p = S_IRUSR | S_IWUSR;
 	f = open(filename, O_TRUNC | O_CREAT | O_WRONLY, p);
 	if (f < 0)
 		return (-1);
+	if (!text_content)
+	{
+		close(f);
+		return (-1);
+	}
 	bw = write(f, text_content, strlen(text_content));
 	if (bw < 0)
 	{
